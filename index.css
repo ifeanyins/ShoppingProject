@@ -36,3 +36,59 @@ body {
     padding: 3px;
     border-radius: 3px;
 }
+
+.imgs {
+    width: 221px;
+    height: 145px;
+}
+
+/* Shop items styles are here */
+
+.shop {
+    display: grid;
+    grid-template-columns: repeat(4, 223px);
+    gap: 20px;
+    justify-content: center;
+}
+
+@media (max-width: 1000px) {
+    .shop {
+        display: grid;
+        grid-template-columns: repeat(2, 223px);
+    }
+}
+@media (max-width: 500px) {
+    .shop {
+        display: grid;
+        grid-template-columns: repeat(1, 223px);
+    }
+}
+
+.item {
+    border: 1px solid #212529;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.details {
+    padding: 10px;
+}
+
+.price-quantity {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.bi-dash-circle {
+    color: red;
+}
+
+.bi-plus-circle {
+    color: green;
+}
