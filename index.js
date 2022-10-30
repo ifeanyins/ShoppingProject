@@ -11,7 +11,7 @@ let shopItemsData = [
 {
     id:'fdsje',
     name:'Hugo Boss Suit',
-    price: 45,
+    price: 1000,
     desc: 'Lorem ipsum, dolor sit amet consectetur obcaecati architecto beatae quis, enim quas mollitia! Eius, excepturi!',
     img: 'images/download2.JPEG'
 },
@@ -35,16 +35,16 @@ let generateShop =()=>{
 return (shop.innerHTML = shopItemsData.map ((x)=>{
     let {id,price,name,desc,img } = x;
     return `
-    <div id-product-id-${id} class="item"><img src=${img} alt="" class="imgs">
+    <div id= product-id-${id} class="item"><img src=${img} alt="" class="imgs">
         <div class="details">
             <h3>${name}</h3>
             <p>${desc}</p>
             <div class="price-quantity">
                 <h2>$ ${price}</h2>
                 <div class="buttons">
-                    <i class="bi bi-dash-circle"></i>
-                    <div class="quantity">0</div>
-                    <i class="bi bi-plus-circle"></i>
+                    <i onclick="decrement(${id})" class="bi bi-dash-circle"></i>
+                    <div id=${id} class="quantity">0</div>
+                    <i onclick="increment(${id})"class="bi bi-plus-circle"></i>
                 </div>
             </div>
         </div>
@@ -54,3 +54,11 @@ return (shop.innerHTML = shopItemsData.map ((x)=>{
 };
 
 generateShop();
+
+let increment =(id)=>{
+    console.log(id)
+}
+let decrement =(id)=>{
+    console.log(id)
+}
+let update =()=>{}
