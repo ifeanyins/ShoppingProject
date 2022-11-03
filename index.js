@@ -31,6 +31,11 @@ let shopItemsData = [
 }
 ];
 
+let basket = [{
+    id:'yfuf',
+    item:1
+}];
+
 let generateShop =()=>{
 return (shop.innerHTML = shopItemsData.map ((x)=>{
     let {id,price,name,desc,img } = x;
@@ -56,9 +61,37 @@ return (shop.innerHTML = shopItemsData.map ((x)=>{
 generateShop();
 
 let increment =(id)=>{
-    console.log(id)
+    let selectedItem = id;
+    let search = basket.find((xr)=> xr.id === selectedItem.id)
+    
+    if (search === undefined) {
+        basket.push({
+            id:selectedItem.id,
+            item: 1,
+        });
+    }
+    else{
+        search.item += 1;
+    }
+
+    // console.log(basket);
+    update(selectedItem.id);
 }
 let decrement =(id)=>{
-    console.log(id)
+    let selectedItem = id;
+    let search = basket.find((xr)=> xr.id === selectedItem.id)
+
+    if (search.item === 0) return;
+    else{
+        search.item -= 1;
+    }
+
+   
+    // console.log(basket);
+    update(selectedItem.id);
 }
-let update =()=>{}
+let update =(id)=>{
+    let search = basket.find((xr) =>xr.id === id);
+    document.getElementById(id).innerHTML = search.item;
+    
+}
