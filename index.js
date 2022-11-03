@@ -31,10 +31,7 @@ let shopItemsData = [
 }
 ];
 
-let basket = [{
-    id:'yfuf',
-    item:1
-}];
+let basket = [];
 
 let generateShop =()=>{
 return (shop.innerHTML = shopItemsData.map ((x)=>{
@@ -62,18 +59,18 @@ generateShop();
 
 let increment =(id)=>{
     let selectedItem = id;
-    let search = basket.find((x) => x.id === selectedItem.id);
+    let search = basket.find((xr)=> xr.id === selectedItem.id)
     
     if (search === undefined) {
         basket.push({
             id:selectedItem.id,
             item: 1,
         });
-    }else{
+    }
+    else{
         search.item += 1;
     }
-
-
+    localStorage.setItem("data", JSON.stringify(basket))
     update(selectedItem.id);
 }
 let decrement =(id)=>{
@@ -84,8 +81,8 @@ let decrement =(id)=>{
     else{
         search.item -= 1;
     }
-
-   
+    
+   localStorage.setItem("data", JSON.stringify(basket))
     update(selectedItem.id);
 }
 let update =(id)=>{
