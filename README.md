@@ -14,9 +14,6 @@
 ![Screenshot (2)](<img src="/images/Screenshot (9).png" alt="Screenshot">)
 
 
-
-
-
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
