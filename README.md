@@ -11,9 +11,10 @@
 
 ## ScreenShot
 
-![Screenshot (2)](https://user-images.githubusercontent.com/110744261/192661492-0f30cf56-1960-4992-980f-189e6a660337.png)
+![Screenshot (2)](<img src="/images/Screenshot (9).png" alt="Screenshot">)
 
-<img src="/images/Screenshot (9).png" alt="Screenshot">
+
+
 
 
 ## Getting Started
