@@ -13,9 +13,6 @@
 
 ![Screenshot (2)](https://user-images.githubusercontent.com/110744261/192661492-0f30cf56-1960-4992-980f-189e6a660337.png)
 
-<img src="/images/Screenshot (9).png" alt="Screenshot">
-
-
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
