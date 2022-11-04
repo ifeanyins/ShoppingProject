@@ -41,6 +41,11 @@ i{
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .imgs {
     width: 221px;
     height: 145px;
